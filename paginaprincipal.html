@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style/main.css" />
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        />
+
+        <title>DW Entregas</title>
+    </head>
+    <body>
+        <dw-header></dw-header>
+
+        <main id="main-content">
+            <dw-hero></dw-hero>
+            <dw-tracking></dw-tracking>
+            <dw-services ></dw-services>
+            <dw-map></dw-map>
+        </main>
+
+        <dw-footer></dw-footer>
+        <script type="module" src="script/main.js"></script>
+        <script
+            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            defer
+        ></script>
+    </body>
+</html>
