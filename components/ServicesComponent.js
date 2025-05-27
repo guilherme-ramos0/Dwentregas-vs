@@ -1,7 +1,7 @@
 class ServicesComponent extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-      <section id="servicos" class="services" aria-labelledby="services-title">
+      <section class="services" aria-labelledby="services-title">
         <h2 id="services-title">Conheça nossos <span class="highlight">serviços</span></h2>
         <div class="services-grid">
           <article class="card" tabindex="0">

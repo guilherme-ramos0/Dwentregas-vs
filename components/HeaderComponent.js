@@ -18,3 +18,4 @@ class HeaderComponent extends HTMLElement {
 }
 
 customElements.define('dw-header', HeaderComponent);
+

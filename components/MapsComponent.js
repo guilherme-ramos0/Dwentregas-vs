@@ -1,7 +1,7 @@
 class MapComponent extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <section id="regioes" class="map-section" aria-label="Localização da DW Entregas">
+        <section class="map-section" aria-label="Localização da DW Entregas">
             <div class="regions-header">
                 <h2 class="regions-title">Regiões</h2>
             </div>

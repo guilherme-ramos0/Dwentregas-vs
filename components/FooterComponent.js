@@ -1,7 +1,7 @@
 class FooterComponent extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <footer id="contato" class="site-footer" role="contentinfo">
+        <footer class="site-footer" role="contentinfo">
             <div class="footer-container">
                 <div class="footer-section">
                     <h3>DW Entregas</h3>
