@@ -52,7 +52,6 @@ class MapComponent extends HTMLElement {
             .openPopup();
 
         const bairros = [
-            { nome: 'Centro-Sul', lat: -19.9311, lng: -43.9324 },
             { nome: 'Pampulha', lat: -19.8302, lng: -43.9707 },
             { nome: 'Venda Nova', lat: -19.8128, lng: -43.9476 },
             { nome: 'Barreiro', lat: -19.944, lng: -44.0607 },
