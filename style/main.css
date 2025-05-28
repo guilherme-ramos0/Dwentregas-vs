@@ -83,7 +83,7 @@ nav.nav {
     flex-wrap: wrap;
     background-size: cover;
     background-position: center;
-    background-image: url(../imagens/motoboy\ baixa\ opacidade.png);
+    background-image: url(../imagens/motoboy-baixa-opacidade.png);
 }
 
 @media (max-width: 768px) {

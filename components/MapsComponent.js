@@ -17,7 +17,7 @@ class MapComponent extends HTMLElement {
                 <strong>Entrega no Próximo Dia</strong>.
                 </p>
                 
-                <img src="imagens/DW Entregas Logo Branca.png" alt="Logo DW Entregas" class="regions-logo" />
+                <img src="imagens/DW-Entregas-Logo-Branca.png" alt="Logo DW Entregas" class="regions-logo" />
                 </div>
             </div>
                 </div>

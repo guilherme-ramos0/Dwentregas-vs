@@ -3,7 +3,7 @@ class HeaderComponent extends HTMLElement {
         this.innerHTML = `
       <header class="site-header" id="site-header">
         <nav class="nav" aria-label="Menu principal">
-          <img src="../imagens/DW\ Entregas\ Logo\ Branca.png" alt="Logo DW Entregas" class="logo" >
+          <img src="../imagens/DW-Entregas-Logo-Branca.png" alt="Logo DW Entregas" class="logo" >
           <ul class="menu">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#sobre">Sobre</a></li>

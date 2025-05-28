@@ -14,7 +14,7 @@ class HeroComponent extends HTMLElement {
                             Pediu, Piscou, Chegou!</p>
           <a href=#" class="cta-button" role="button">Comece a usar!</a>
         </div>
-          <img src="imagens/DW Entregas Logo Laranja.png" alt="Logo DW Entregas"  class="logo-hero">
+          <img src="imagens/DW-Entregas-Logo-Laranja.png" alt="Logo DW Entregas"  class="logo-hero">
       </section>
     `;
     }
