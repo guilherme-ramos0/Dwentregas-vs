@@ -6,16 +6,16 @@ class FooterComponent extends HTMLElement {
                 <div class="footer-section">
                     <h3>DW Entregas</h3>
                     <p>Endereço: Av. Exemplo, 123 – Belo Horizonte, MG</p>
-                    <p>Telefone: <a href="#">+55 (31) 99999-9999</a></p>
-                    <p>Email: <a href="#">contato@dwentregas.com.br</a></p>
+                    <p>Telefone: +55 (31) 99999-9999</p>
+                    <p>Email: contato@dwentregas.com.br</p>
                 </div>
 
                 <div class="footer-section" aria-label="Redes sociais">
                     <h3>Siga-nos</h3>
                     <ul class="social-list">
-                    <li><a href="#" aria-label="Facebook DW Entregas">Facebook</a></li>
-                    <li><a href="#" aria-label="Instagram DW Entregas">Instagram</a></li>
-                    <li><a href="#" aria-label="LinkedIn DW Entregas">LinkedIn</a></li>
+                    <li aria-label="Facebook DW Entregas">Facebook</li>
+                    <li aria-label="Instagram DW Entregas">Instagram</li>
+                    <li aria-label="LinkedIn DW Entregas">LinkedIn</li>
                     </ul>
                 </div>
                 </div>

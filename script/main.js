@@ -23,3 +23,5 @@ import '../components/FooterComponent.js';
         lastScrollY = currentScrollY;
     });
 })();
+
+
