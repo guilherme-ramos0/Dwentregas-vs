@@ -45,12 +45,10 @@ nav.nav {
     left: 0;
     right: 0;
     height: 100px;
-    background-color: rgba(0, 0, 0, 1);
     transition: transform 0.3s ease, opacity 0.3s ease;
     z-index: 1000;
 }
 
-/* Classe que esconde o header */
 .site-header.hidden {
     transform: translateY(-100%);
     opacity: 0;
@@ -72,6 +70,27 @@ nav.nav {
     color: var(--white);
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+.menu a {
+    position: relative;
+    padding-bottom: 0.25rem;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.menu a.active {
+    color: var(--black);
+}
+
+.menu a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: var(--primary);
+    border-radius: 2px;
 }
 
 .hero {
