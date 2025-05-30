@@ -106,13 +106,6 @@ nav.nav {
     background-image: url(../imagens/motoboy-baixa-opacidade.png);
 }
 
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
 .logo-hero {
     width: 50%;
 }
@@ -335,5 +328,107 @@ nav.nav {
     }
     .footer-section {
         text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mapa passa a 100% de largura e altura reduzida */
+    .map-container,
+    .regions-map {
+        width: 100% !important;
+        height: 300px;
+    }
+
+    /* Na seção Regiões, empilha em coluna */
+    .regions-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .regions-text {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text,
+    .logo-hero {
+        width: 100%;
+    }
+    .tracking-hero__content,
+    .tracking-hero__media {
+        flex: 1 1 100%;
+    }
+    .tracking-hero__media {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* 1) Botão hambúrguer — oculto em desktop */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+.hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary);
+    border-radius: 2px;
+}
+
+/* 2) Em desktop, mantém o menu horizontal */
+.menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* 3) Regras para mobile */
+@media (max-width: 768px) {
+    /* mostra o botão */
+    .nav-toggle {
+        display: flex;
+    }
+    /* esconde o menu padrão */
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100%;
+        background-color: var(--primary);
+        flex-direction: column;
+        padding: 4rem 1rem;
+        gap: 2rem;
+        transition: right 0.3s ease;
+        z-index: 1001;
+    }
+    /* quando aberto, traga para a tela */
+    .menu.open {
+        right: 0;
     }
 }
