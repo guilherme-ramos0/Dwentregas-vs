@@ -23,26 +23,4 @@ class HeaderComponent extends HTMLElement {
     `;
     }
 }
-// Seleciona elementos
-const toggleBtn = this.querySelector('.nav-toggle');
-const menuEl = this.querySelector('.menu');
-const links = this.querySelectorAll('.menu a');
-
-// Verifica se elementos existem antes de adicionar eventos
-if (toggleBtn && menuEl) {
-    // Abre/fecha sidebar ao clicar no botão
-    toggleBtn.addEventListener('click', () => {
-        menuEl.classList.toggle('open');
-    });
-
-    // Fecha sidebar ao clicar em um item de menu
-    links.forEach((link) => {
-        link.addEventListener('click', () => {
-            menuEl.classList.remove('open');
-        });
-    });
-} else {
-    console.warn('HeaderComponent: nav-toggle ou .menu não encontrado.');
-}
-
 customElements.define('dw-header', HeaderComponent);
