@@ -78,10 +78,6 @@ nav.nav {
     transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.menu a.active {
-    color: var(--black);
-}
-
 .menu a.active::after {
     content: '';
     position: absolute;
@@ -91,6 +87,11 @@ nav.nav {
     height: 2px;
     background-color: var(--primary);
     border-radius: 2px;
+    display: none;
+}
+.menu a.active {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
 }
 
 .hero {
