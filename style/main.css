@@ -384,3 +384,82 @@ nav.nav {
         text-align: center;
     }
 }
+
+/* Overlay escondido por padrão */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0; /* top:0; right:0; bottom:0; left:0 */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+/* Quando .open, overlay aparece */
+.nav-overlay.open {
+    display: block;
+    opacity: 1;
+}
+
+/* Sidebar / menu fullscreen */
+.menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* escondido fora da tela */
+    width: 100%; /* cobre toda a largura */
+    height: 100%; /* cobre toda a altura */
+    background-color: var(--primary);
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    gap: 2rem;
+    list-style: none;
+    transition: right 0.3s ease;
+    z-index: 1001; /* acima do overlay */
+    overflow-y: auto; /* scroll se exceder altura */
+}
+
+/* Quando aberto, a sidebar ocupa full screen */
+.menu.open {
+    right: 0;
+}
+
+
+
+/* Botão hambúrguer (mobile) */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--white);
+}
+
+/* Desktop: menu sempre visível e horizontal */
+@media (min-width: 769px) {
+    .nav-toggle,
+    .nav-overlay {
+        display: none !important;
+    }
+    .menu {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        height: auto;
+        background: none;
+        padding: 0;
+        gap: 1.5rem;
+        transition: none;
+    }
+}
+
+/* Mobile: exibe o toggle e esconde o menu padrão */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+    /* a .menu vai do fixed acima */
+}
