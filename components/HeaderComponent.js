@@ -7,7 +7,7 @@ class HeaderComponent extends HTMLElement {
           
 
           <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-            <span id="burguer" class="material-symbols-outlined">menu</span>
+            <span class="material-symbols-outlined">menu</span>
           </button>
           
           <ul class="menu">

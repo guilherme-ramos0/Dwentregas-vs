@@ -438,6 +438,7 @@ nav.nav {
 /* Desktop: menu sempre visível e horizontal */
 @media (min-width: 769px) {
     .nav-toggle,
+    .menu-close-container,
     .nav-overlay {
         display: none !important;
     }
