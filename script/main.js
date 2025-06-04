@@ -12,7 +12,7 @@ import '../components/FooterComponent.js';
     window.addEventListener('scroll', () => {
         const currentScrollY = window.pageYOffset;
 
-        if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        if (currentScrollY > lastScrollY) {
             // rolando para baixo → esconde
             header.classList.add('hidden');
         } else {
