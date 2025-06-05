@@ -150,7 +150,7 @@ img {
     height: 100px;
     transition: transform 0.3s ease, opacity 0.3s ease,
         background-color 0.3s ease;
-    z-index: 1000; 
+    z-index: 1000;
     background-color: var(--primary);
     box-shadow: var(--shadow-sm);
 }
@@ -282,7 +282,7 @@ nav.nav {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     color: var(--black);
     padding: var(--space-xl);
     background-size: cover;
@@ -314,14 +314,12 @@ nav.nav {
 }
 
 .logo-hero {
-    flex: 0 1 30%;
-    min-width: 50%;
+    width: 50%;
 }
 
 .hero-text {
-    flex: 1 1 50%;
     font-size: clamp(1.5rem, 4vw, 3rem);
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .hero-text h1 {
@@ -351,6 +349,7 @@ nav.nav {
 .tracking-hero__text {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     line-height: 1.4;
+    text-align: center;
 }
 
 .tracking-hero__media {
@@ -391,13 +390,20 @@ nav.nav {
 /* ============= */
 /* MAPA/REGIÕES */
 /* ============= */
+
+#map {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    display: block;
+}
+
 .map-section {
     background-color: var(--primary);
     color: var(--white);
     border-radius: var(--border-radius);
     padding: var(--space-xl);
     margin: var(--space-xl) auto;
-    max-width: 97%;
 }
 
 .regions-header {
@@ -416,25 +422,23 @@ nav.nav {
 
 .regions-content {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: var(--space-xl);
-    align-items: center;
 }
 
 .regions-text {
-    flex: 1 1 50%;
-    min-width: 300px;
-    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    flex: 1 1 20%;
+    font-size: clamp(1.25rem, 3vw, 2.5rem);
     line-height: 1.5;
 }
 
 .map-container {
     flex: 1 1 40%;
-    min-width: 300px;
-    height: 500px;
-    width: 60%;
+    height: 600px;
+    width: 50%;
     border-radius: var(--border-radius);
-    overflow: hidden;
     box-shadow: var(--shadow-md);
 }
 
@@ -543,50 +547,75 @@ nav.nav {
 }
 
 @media (max-width: 768px) {
-    .hero{
-        display: flex;
+    .hero {
         flex-direction: column;
     }
     .logo-hero {
-        max-width: 100%;
-        margin: 0 auto var(--space-md);
+        width: 60%; /* ou ajuste conforme a logo permite visualmente */
+        max-width: 220px; /* limite máximo para logo não crescer demais */
+        margin: 0 auto;
     }
-    .logo-hero img {
-        width: 100%;
-        height: auto;
+    .hero-text {
+        font-size: 2rem; /* reduz um pouco para mobile */
+        margin-top: var(--space-sm);
     }
 
-    .hero-text {
-        flex: 1 1 100%;
-        max-width: 100%;
-        margin-top: var(--space-md);
+    .hero-text h1 {
+        margin-bottom: var(--space-sm);
+        line-height: 1.2;
     }
 
     .hero-content {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+        gap: var(--space-md);
     }
 
-    .logo-hero,
-    .hero-text {
-        flex: 1 1 100%;
+
+    .tracking-hero__media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
     }
 
+    .tracking-hero__media img {
+        width: auto; /* deixa a largura automática */
+        max-width: 100%; /* limita ao tamanho do contêiner */
+        height: auto; /* mantém proporção natural */
+        object-fit: contain; /* evita recortes excessivos */
+        object-position: center; /* garante que o ponto focal seja o centro */
+    }
     .tracking-hero__content,
     .tracking-hero__media {
         flex: 1 1 100%;
     }
 
     .tracking-hero__media {
-        height: 300px;
-    }
-
-    .map-container {
-        height: 350px;
+        height: 100%;
     }
 
     .regions-content {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .regions-text,
+    .map-container {
+        width: 100%;
+    }
+
+    .map-container {
+        height: 350px;
+        max-width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .map-container #map {
+        width: 100%;
+        height: 100%;
     }
 
     .footer-container {
@@ -615,11 +644,6 @@ nav.nav {
 
     .services {
         padding: var(--space-md);
-    }
-
-    .map-section {
-        padding: var(--space-md);
-        margin: var(--space-md);
     }
 
     .map-container {

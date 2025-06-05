@@ -3,24 +3,24 @@ class MapComponent extends HTMLElement {
         this.innerHTML = `
         <section class="map-section" aria-label="Localização da DW Entregas">
             <div class="regions-header">
-                <h2 class="regions-title">Regiões</h2>
+            <h2 class="regions-title">Regiões</h2>
             </div>
-        
-            <div class="regions-content">
-                <div id="map" class="map-container" role="application" aria-label="Mapa de regiões atendidas"></div>
 
-                <div class="regions-text">
+            <div class="regions-content">
+            <div class="map-container">
+                <div id="map" role="application" aria-label="Mapa de regiões atendidas"></div>
+            </div>
+
+            <div class="regions-text">
                 <p>
                 Aqui você vê as regiões em que atuamos, com um mapa interativo e lista de cidades atendidas,
                 como Belo Horizonte e arredores. Confira os serviços disponíveis, incluindo
                 <strong>Envios Flex</strong>, <strong>Entrega no Mesmo Dia</strong> e
                 <strong>Entrega no Próximo Dia</strong>.
                 </p>
-                
                 <img src="imagens/DW-Entregas-Logo-Branca.png" alt="Logo DW Entregas" class="regions-logo" />
-                </div>
             </div>
-                </div>
+            </div>
         </section>
     `;
 
@@ -42,6 +42,10 @@ class MapComponent extends HTMLElement {
             [-19.9191, -43.9386],
             10
         ); // Região de BH
+        setTimeout(() => {
+            map.invalidateSize();
+        }, 0);
+
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors',
         }).addTo(map);
