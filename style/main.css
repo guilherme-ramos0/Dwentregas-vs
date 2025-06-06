@@ -60,6 +60,11 @@ body {
     overflow-x: hidden;
 }
 
+html,
+body {
+    overscroll-behavior-y: contain;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -245,6 +250,7 @@ nav.nav {
         font-size: 1.5rem;
         padding: var(--space-sm) 0;
         display: block;
+        text-align: center;
     }
 
     .menu-close-container {
@@ -252,6 +258,23 @@ nav.nav {
         top: var(--space-md);
         right: var(--space-md);
         z-index: 1002;
+        display: flex;
+    }
+    .menu-close {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-overlay.open {
+        z-index: 1000;
+    }
+
+    .site-header {
+        position: fixed;
+    }
+
+    .menu-open .map-container {
+        z-index: 10 !important; /* Rebaixa o mapa quando menu aberto */
     }
 }
 
@@ -289,7 +312,6 @@ nav.nav {
     background-position: center;
     background-image: url(../imagens/motoboy-baixa-opacidade.png);
     position: relative;
-    isolation: isolate;
 }
 
 /* Overlay para melhor legibilidade */
@@ -571,7 +593,6 @@ nav.nav {
         text-align: center;
         gap: var(--space-md);
     }
-
 
     .tracking-hero__media {
         display: flex;

@@ -7,19 +7,19 @@ class MapComponent extends HTMLElement {
             </div>
 
             <div class="regions-content">
-            <div class="map-container">
-                <div id="map" role="application" aria-label="Mapa de regiões atendidas"></div>
-            </div>
+                <div class="map-container">
+                    <div id="map" role="application" aria-label="Mapa de regiões atendidas"></div>
+                </div>
 
-            <div class="regions-text">
-                <p>
-                Aqui você vê as regiões em que atuamos, com um mapa interativo e lista de cidades atendidas,
-                como Belo Horizonte e arredores. Confira os serviços disponíveis, incluindo
-                <strong>Envios Flex</strong>, <strong>Entrega no Mesmo Dia</strong> e
-                <strong>Entrega no Próximo Dia</strong>.
-                </p>
-                <img src="imagens/DW-Entregas-Logo-Branca.png" alt="Logo DW Entregas" class="regions-logo" />
-            </div>
+                <div class="regions-text">
+                    <p>
+                    Aqui você vê as regiões em que atuamos, com um mapa interativo e lista de cidades atendidas,
+                    como Belo Horizonte e arredores. Confira os serviços disponíveis, incluindo
+                    <strong>Envios Flex</strong>, <strong>Entrega no Mesmo Dia</strong> e
+                    <strong>Entrega no Próximo Dia</strong>.
+                    </p>
+                    <img src="imagens/DW-Entregas-Logo-Branca.png" alt="Logo DW Entregas" class="regions-logo" />
+                </div>
             </div>
         </section>
     `;

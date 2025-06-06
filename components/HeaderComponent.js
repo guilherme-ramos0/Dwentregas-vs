@@ -21,7 +21,7 @@ class HeaderComponent extends HTMLElement {
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#servicos">Serviços</a></li>
             <li><a href="#regioes">Regiões</a></li>
-          <li><a href="#contato">Contato</a></li>
+            <li><a href="#contato">Contato</a></li>
           </ul>
 
           <div class="nav-overlay"></div>
@@ -33,6 +33,7 @@ class HeaderComponent extends HTMLElement {
         const overlay = this.querySelector('.nav-overlay');
         const iconEl = toggleBtn.querySelector('span');
         const closeBtn = this.querySelector('.menu-close');
+        document.body.classList.remove('menu-open');
 
         function closeMenu() {
             menuEl.classList.remove('open');
@@ -59,6 +60,12 @@ class HeaderComponent extends HTMLElement {
 
             // Fecha ao clicar no overlay (fora da sidebar)
             overlay.addEventListener('click', closeMenu);
+
+            if (isOpen) {
+                document.body.classList.add('menu-open');
+            } else {
+                document.body.classList.remove('menu-open');
+            }
         }
     }
 }
