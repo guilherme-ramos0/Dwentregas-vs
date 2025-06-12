@@ -148,7 +148,7 @@ img {
 /* CABEÇALHO E NAVEGAÇÃO */
 /* ================== */
 .site-header {
-    position: sticky;
+    position: stidcky;
     top: 0;
     left: 0;
     right: 0;
@@ -227,6 +227,7 @@ nav.nav {
 
 /* Menu mobile */
 @media (max-width: 768px) {
+
     .menu {
         position: fixed;
         top: 0;
